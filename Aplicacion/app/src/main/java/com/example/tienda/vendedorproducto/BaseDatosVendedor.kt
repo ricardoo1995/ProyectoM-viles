@@ -1,4 +1,4 @@
-package com.example.wilson.estudiantemateria
+package com.example.tienda.vendedorproducto
 
 import android.os.StrictMode
 import android.util.Log
@@ -7,40 +7,40 @@ import com.beust.klaxon.JsonObject
 import com.beust.klaxon.Parser
 import com.github.kittinunf.fuel.*
 
-class BaseDatosEstudiante{
+class BaseDatosVendedor{
 
     companion object {
 
-        fun insertarEstudiante(estudiante:Estudiante){
-            "http://192.168.100.189:1337/Estudiante".httpPost(listOf("nombres" to estudiante.nombres, "apellidos" to estudiante.apellidos, "fechaNacimiento" to estudiante.fechaNacimiento, "semestreActual" to estudiante.semestreActual, "graduado" to estudiante.graduado))
+        fun insertarVendedor(vendedor:Vendedor){
+            "http://192.168.100.189:1337/Vendedor".httpPost(listOf("nombres" to vendedor.nombres, "apellidos" to vendedor.apellidos, "fechaNacimiento" to vendedor.fechaNacimiento, "semestreActual" to vendedor.semestreActual, "graduado" to vendedor.graduado))
                     .responseString { request, _, result ->
                         Log.d("http-ejemplo", request.toString())
                     }
         }
 
-        fun eliminarEstudiante(id: Int) {
-            "http://192.168.100.189:1337/Estudiante/$id".httpDelete()
+        fun eliminarVendedor(id: Int) {
+            "http://192.168.100.189:1337/Vendedor/$id".httpDelete()
                     .responseString { request, response, result ->
                         Log.d("http-ejemplo", request.toString())
                     }
         }
 
-        fun actualizarEstudiante(estudiante: Estudiante) {
-            "http://192.168.100.189:1337/Estudiante/${estudiante.id}".httpPut(listOf("nombres" to estudiante.nombres, "apellidos" to estudiante.apellidos, "fechaNacimiento" to estudiante.fechaNacimiento, "semestreActual" to estudiante.semestreActual, "graduado" to estudiante.graduado))
+        fun actualizarVendedor(vendedor: Vendedor) {
+            "http://192.168.100.189:1337/Vendedor/${vendedor.id}".httpPut(listOf("nombres" to vendedor.nombres, "apellidos" to vendedor.apellidos, "fechaNacimiento" to vendedor.fechaNacimiento, "semestreActual" to vendedor.semestreActual, "graduado" to vendedor.graduado))
                     .responseString { request, _, result ->
                         Log.d("http-ejemplo", request.toString())
                     }
         }
 
-        fun getList(): ArrayList<Estudiante> {
-            val estudiantes: ArrayList<Estudiante> = ArrayList()
+        fun getList(): ArrayList<Vendedor> {
+            val vendedores: ArrayList<Vendedor> = ArrayList()
             val policy = StrictMode.ThreadPolicy.Builder().permitAll().build()
             StrictMode.setThreadPolicy(policy)
-            val (request, response, result) = "http://192.168.100.189:1337/Estudiante".httpGet().responseString()
-            val jsonStringEstudiante = result.get()
+            val (request, response, result) = "http://192.168.100.189:1337/Vendedor".httpGet().responseString()
+            val jsonStringVendedor = result.get()
 
             val parser = Parser()
-            val stringBuilder = StringBuilder(jsonStringEstudiante)
+            val stringBuilder = StringBuilder(jsonStringVendedor)
             val array = parser.parse(stringBuilder) as JsonArray<JsonObject>
 
             array.forEach {
@@ -50,21 +50,21 @@ class BaseDatosEstudiante{
                 val fechaNacimiento = it["fechaNacimiento"] as String
                 val semestreActual = it["semestreActual"] as Int
                 val graduado = it["graduado"] as Int
-                val estudiante = Estudiante(id, nombres, apellidos, fechaNacimiento, semestreActual, graduado, 0, 0)
-                estudiantes.add(estudiante)
+                val vendedor = Vendedor(id, nombres, apellidos, fechaNacimiento, semestreActual, graduado, 0, 0)
+                vendedores.add(vendedor)
             }
-            return estudiantes
+            return vendedores
         }
 
-        fun buscarEstudiante(nombre:String): ArrayList<Estudiante> {
-            val estudiantes: ArrayList<Estudiante> = ArrayList()
+        fun buscarVendedor(nombre:String): ArrayList<Vendedor> {
+            val vendedores: ArrayList<Vendedor> = ArrayList()
             val policy = StrictMode.ThreadPolicy.Builder().permitAll().build()
             StrictMode.setThreadPolicy(policy)
-            val (request, response, result) = "http://192.168.100.189:1337/Estudiante?nombres=${nombre}".httpGet().responseString()
-            val jsonStringEstudiante = result.get()
+            val (request, response, result) = "http://192.168.100.189:1337/Vendedor?nombres=${nombre}".httpGet().responseString()
+            val jsonStringVendedor = result.get()
 
             val parser = Parser()
-            val stringBuilder = StringBuilder(jsonStringEstudiante)
+            val stringBuilder = StringBuilder(jsonStringVendedor)
             val array = parser.parse(stringBuilder) as JsonArray<JsonObject>
 
             array.forEach {
@@ -74,10 +74,10 @@ class BaseDatosEstudiante{
                 val fechaNacimiento = it["fechaNacimiento"] as String
                 val semestreActual = it["semestreActual"] as Int
                 val graduado = it["graduado"] as Int
-                val estudiante = Estudiante(id, nombres, apellidos, fechaNacimiento, semestreActual, graduado, 0, 0)
-                estudiantes.add(estudiante)
+                val vendedor = Vendedor(id, nombres, apellidos, fechaNacimiento, semestreActual, graduado, 0, 0)
+                vendedores.add(vendedor)
             }
-            return estudiantes
+            return vendedores
         }
 
     }

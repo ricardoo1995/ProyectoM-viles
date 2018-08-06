@@ -1,9 +1,9 @@
-package com.example.wilson.estudiantemateria
+package com.example.tienda.vendedorproducto
 
 import android.os.Parcel
 import android.os.Parcelable
 
-class DetallesOrden(var id:Int, var fechaEnvio:String, var precio:Int, var idMateria:Int) : Parcelable {
+class DetallesOrden(var id:Int, var fechaEnvio:String, var precio:Int, var idProducto:Int) : Parcelable {
     constructor(parcel: Parcel) : this(
             parcel.readInt(),
             parcel.readString(),
@@ -15,7 +15,7 @@ class DetallesOrden(var id:Int, var fechaEnvio:String, var precio:Int, var idMat
         parcel.writeInt(id)
         parcel.writeString(fechaEnvio)
         parcel.writeInt(precio)
-        parcel.writeInt(idMateria)
+        parcel.writeInt(idProducto)
     }
 
     override fun describeContents(): Int {

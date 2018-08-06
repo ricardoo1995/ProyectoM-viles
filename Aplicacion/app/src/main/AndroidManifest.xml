@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.wilson.estudiantemateria">
+    package="com.example.tienda.vendedorproducto">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -44,16 +44,16 @@
             </intent-filter>
         </activity>
         <activity android:name=".RegistrarUsuarios" />
-        <activity android:name=".EstudianteActivity" />
-        <activity android:name=".ListarEstudiantesActivity" />
-        <activity android:name=".DetallesEstudianteActivity" />
+        <activity android:name=".VendedorActivity" />
+        <activity android:name=".ListarVendedoresActivity" />
+        <activity android:name=".DetallesVendedorActivity" />
         <activity android:name=".DeliveryActivity" />
-        <activity android:name=".MateriaActivity" />
-        <activity android:name=".DetallesMateriaActivity" />
-        <activity android:name=".BuscarEstudianteActivity" />
-        <activity android:name=".ListarEstudianteClienteActivity" />
-        <activity android:name=".DetallesEstudianteClienteActivity" />
-        <activity android:name=".DetallesMateriaClienteActivity" />
+        <activity android:name=".ProductoActivity" />
+        <activity android:name=".DetallesProductoActivity" />
+        <activity android:name=".BuscarVendedorActivity" />
+        <activity android:name=".ListarVendedorClienteActivity" />
+        <activity android:name=".DetallesVendedorClienteActivity" />
+        <activity android:name=".DetallesProductoClienteActivity" />
         <activity android:name=".CompradorActivity" />
         <activity android:name=".DetalleOrdenesActivity" />
         <!--

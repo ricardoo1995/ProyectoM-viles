@@ -1,4 +1,4 @@
-package com.example.wilson.estudiantemateria
+package com.example.tienda.vendedorproducto
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
@@ -21,30 +21,30 @@ class RegistrarUsuarios : AppCompatActivity() {
 
 
         if (rol.equals("VENDEDOR",true)){
-            btnBuscarEstudiantes.visibility = View.INVISIBLE
+            btnBuscarVendedores.visibility = View.INVISIBLE
 
         }else if (rol.equals("DELIVERY",true)){
-            btnBuscarEstudiantes.visibility = View.INVISIBLE
-            btnCrearEstudiante.visibility = View.INVISIBLE
-            btnListarEstudiante.visibility = View.INVISIBLE
+            btnBuscarVendedores.visibility = View.INVISIBLE
+            btnCrearVendedor.visibility = View.INVISIBLE
+            btnListarVendedor.visibility = View.INVISIBLE
             irActividadDelivery()
 
         }else{
-            btnCrearEstudiante.visibility = View.INVISIBLE
-            btnListarEstudiante.visibility = View.INVISIBLE
+            btnCrearVendedor.visibility = View.INVISIBLE
+            btnListarVendedor.visibility = View.INVISIBLE
         }
 
 
-      btnCrearEstudiante.setOnClickListener { v: View? ->
-          irEstudianteActivity()
+      btnCrearVendedor.setOnClickListener { v: View? ->
+          irVendedorActivity()
       }
 
-        btnListarEstudiante.setOnClickListener { v: View? ->
-            irListarEstudianteActivity()
+        btnListarVendedor.setOnClickListener { v: View? ->
+            irListarVendedorActivity()
         }
 
-        btnBuscarEstudiantes.setOnClickListener { v: View? ->
-            irBuscarEstudianteActivity()
+        btnBuscarVendedores.setOnClickListener { v: View? ->
+            irBuscarVendedorActivity()
         }
 
         btn_salirsistema.setOnClickListener { v: View? ->
@@ -54,14 +54,14 @@ class RegistrarUsuarios : AppCompatActivity() {
 
     }
 
-    fun irEstudianteActivity(){
-        val intent = Intent(this, EstudianteActivity::class.java)
+    fun irVendedorActivity(){
+        val intent = Intent(this, VendedorActivity::class.java)
         intent.putExtra("tipo", "Create")
         startActivity(intent)
     }
 
-    fun irListarEstudianteActivity(){
-        val intent = Intent(this, ListarEstudiantesActivity::class.java)
+    fun irListarVendedorActivity(){
+        val intent = Intent(this, ListarVendedoresActivity::class.java)
         startActivity(intent)
     }
 
@@ -71,8 +71,8 @@ class RegistrarUsuarios : AppCompatActivity() {
 
     }
 
-    fun irBuscarEstudianteActivity(){
-        val intent = Intent(this,BuscarEstudianteActivity::class.java)
+    fun irBuscarVendedorActivity(){
+        val intent = Intent(this,BuscarVendedorActivity::class.java)
         startActivity(intent)
 
     }

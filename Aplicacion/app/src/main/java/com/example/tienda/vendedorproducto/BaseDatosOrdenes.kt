@@ -1,4 +1,4 @@
-package com.example.wilson.estudiantemateria
+package com.example.tienda.vendedorproducto
 
 import android.os.StrictMode
 import android.util.Log
@@ -11,14 +11,14 @@ import com.github.kittinunf.fuel.httpPost
 class BaseDatosOrdenes{
     companion object {
         fun insertarOrden(ordenes: Ordenes){
-            "http://192.168.100.189:1337/Orden".httpPost(listOf("cedulaIdentidad" to ordenes.cedulaComprador, "sector" to ordenes.sector, "idMateria" to ordenes.idMateria))
+            "http://192.168.100.189:1337/Orden".httpPost(listOf("cedulaIdentidad" to ordenes.cedulaComprador, "sector" to ordenes.sector, "idProducto" to ordenes.idProducto))
                     .responseString { request, _, result ->
                         Log.d("http-ejemplo", request.toString())
                     }
         }
 
         fun insertarOrdenDetalles(detallesOrden: DetallesOrden){
-            "http://192.168.100.189:1337/DetalleOrden".httpPost(listOf("fechaEnvio" to detallesOrden.fechaEnvio, "precio" to detallesOrden.precio, "idMateria" to detallesOrden.idMateria))
+            "http://192.168.100.189:1337/DetalleOrden".httpPost(listOf("fechaEnvio" to detallesOrden.fechaEnvio, "precio" to detallesOrden.precio, "idProducto" to detallesOrden.idProducto))
                     .responseString { request, _, result ->
                         Log.d("http-ejemplo", request.toString())
                     }
@@ -40,10 +40,10 @@ class BaseDatosOrdenes{
             array.forEach {
                 val cedulaIdentidad = it["cedulaIdentidad"] as Int
                 val sector = it["sector"] as String
-                val idMateria = it["idMateria"] as Int
+                val idProducto = it["idProducto"] as Int
                 //val latitud = it["latitud"] as Double
                 // val longitud = it["longitud"] as Double
-                val ordenes = Ordenes(0,cedulaIdentidad,sector,idMateria)
+                val ordenes = Ordenes(0,cedulaIdentidad,sector,idProducto)
                 orden.add(ordenes)
             }
             return orden

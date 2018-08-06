@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ListarEstudianteClienteActivity">
+    tools:context=".ListarVendedorClienteActivity">
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/recyclerView_listarEstudiante_Clientes"
+        android:id="@+id/recyclerView_listarVendedor_Clientes"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="8dp"

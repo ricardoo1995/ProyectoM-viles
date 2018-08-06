@@ -1,4 +1,4 @@
-package com.example.wilson.estudiantemateria
+package com.example.tienda.vendedorproducto
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
@@ -8,40 +8,40 @@ import android.support.v7.widget.DefaultItemAnimator
 import android.support.v7.widget.LinearLayoutManager
 import android.util.Log
 import android.view.MenuItem
-import kotlinx.android.synthetic.main.activity_listar_estudiantes.*
+import kotlinx.android.synthetic.main.activity_listar_vendedores.*
 
-class ListarEstudiantesActivity : AppCompatActivity() {
+class ListarVendedoresActivity : AppCompatActivity() {
 
-    lateinit var adaptador: EstudianteAdapter
-    lateinit var estudiantes: ArrayList<Estudiante>
+    lateinit var adaptador: VendedorAdapter
+    lateinit var vendedores: ArrayList<Vendedor>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_listar_estudiantes)
+        setContentView(R.layout.activity_listar_vendedores)
 
-        estudiantes = BaseDatosEstudiante.getList()
+        vendedores = BaseDatosVendedor.getList()
 
 
         val layoutManager = LinearLayoutManager(this)
-        adaptador = EstudianteAdapter(estudiantes)
-        recyclerViewEstudiante.layoutManager = layoutManager
-        recyclerViewEstudiante.itemAnimator = DefaultItemAnimator()
-        recyclerViewEstudiante.adapter = adaptador
+        adaptador = VendedorAdapter(vendedores)
+        recyclerViewVendedor.layoutManager = layoutManager
+        recyclerViewVendedor.itemAnimator = DefaultItemAnimator()
+        recyclerViewVendedor.adapter = adaptador
         adaptador.notifyDataSetChanged()
 
-        registerForContextMenu(recyclerViewEstudiante)
+        registerForContextMenu(recyclerViewVendedor)
     }
 
     override fun onContextItemSelected(item: MenuItem): Boolean {
         var position = adaptador.getPosition()
-        var estudiante = estudiantes[position]
+        var vendedor = vendedores[position]
 
         when (item.itemId) {
 
             R.id.item_menu_editar -> {
-                val intent = Intent(this, EstudianteActivity::class.java)
+                val intent = Intent(this, VendedorActivity::class.java)
                 intent.putExtra("tipo", "Edit")
-                intent.putExtra("estudiante", estudiante)
+                intent.putExtra("vendedor", vendedor)
                 startActivity(intent)
                 return true
             }
@@ -49,7 +49,7 @@ class ListarEstudiantesActivity : AppCompatActivity() {
                 val builder = AlertDialog.Builder(this)
                 builder.setMessage("Esta seguro de eliminar?")
                         .setPositiveButton("Si", { dialog, which ->
-                            BaseDatosEstudiante.eliminarEstudiante(estudiante.id)
+                            BaseDatosVendedor.eliminarVendedor(vendedor.id)
                             finish()
                             startActivity(intent)
                         }

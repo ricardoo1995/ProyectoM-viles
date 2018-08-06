@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BuscarEstudianteActivity">
+    tools:context=".BuscarVendedorActivity">
 
     <TextView
         android:id="@+id/textView7"
@@ -13,7 +13,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="28dp"
-        android:text="Buscar Estudiante"
+        android:text="Buscar Vendedor"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -28,23 +28,23 @@
         android:layout_marginTop="80dp"
         android:orientation="vertical"
         android:padding="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/recyclerView_Resultados_Estudiante"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerView_Resultados_Vendedor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <EditText
-            android:id="@+id/txtBuscarEstudiante"
+            android:id="@+id/txtBuscarVendedor"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/colorPrimary"
             android:ems="10"
-            android:hint="Ingresa nombre de estudiante"
+            android:hint="Ingresa nombre de vendedor"
             android:inputType="textPersonName"
             android:textAlignment="center" />
 
         <Button
-            android:id="@+id/btnBuscarEstudianteServer"
+            android:id="@+id/btnBuscarVendedorServer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorPrimary"
@@ -67,7 +67,7 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/recyclerView_Resultados_Estudiante"
+        android:id="@+id/recyclerView_Resultados_Vendedor"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="8dp"

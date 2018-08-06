@@ -1,4 +1,4 @@
-package com.example.wilson.estudiantemateria
+package com.example.tienda.vendedorproducto
 import android.os.StrictMode
 import android.util.Log
 
@@ -20,10 +20,10 @@ class BaseDatosUsuario{
             val policy = StrictMode.ThreadPolicy.Builder().permitAll().build()
             StrictMode.setThreadPolicy(policy)
             val (request, response, result) = "http://192.168.100.189:1337/Usuario".httpGet().responseString()
-            val jsonStringEstudiante = result.get()
+            val jsonStringVendedor = result.get()
 
             val parser = Parser()
-            val stringBuilder = StringBuilder(jsonStringEstudiante)
+            val stringBuilder = StringBuilder(jsonStringVendedor)
             val array = parser.parse(stringBuilder) as JsonArray<JsonObject>
 
             array.forEach {

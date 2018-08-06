@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DetallesEstudianteActivity">
+    tools:context=".DetallesVendedorActivity">
 
     <TextView
         android:id="@+id/textView8"
@@ -13,7 +13,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="272dp"
-        android:text="Lista Materia"
+        android:text="Lista Producto"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,7 +27,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
-        android:text="Detalles Estudiante"
+        android:text="Detalles Vendedor"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -90,7 +90,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <TextView
-        android:id="@+id/txtShowNombreEstudiante"
+        android:id="@+id/txtShowNombreVendedor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="152dp"
@@ -102,7 +102,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/txtShowApellidoEstudiante"
+        android:id="@+id/txtShowApellidoVendedor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="152dp"
@@ -110,10 +110,10 @@
         android:text="TextView"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtShowNombreEstudiante" />
+        app:layout_constraintTop_toBottomOf="@+id/txtShowNombreVendedor" />
 
     <TextView
-        android:id="@+id/txtShowFechaNacEstudiante"
+        android:id="@+id/txtShowFechaNacVendedor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="152dp"
@@ -121,17 +121,17 @@
         android:text="TextView"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtShowApellidoEstudiante" />
+        app:layout_constraintTop_toBottomOf="@+id/txtShowApellidoVendedor" />
 
     <Button
-        android:id="@+id/btnNuevaMateria"
+        android:id="@+id/btnNuevaProducto"
         android:layout_width="108dp"
         android:layout_height="180dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="72dp"
         android:background="@color/colorPrimary"
-        android:text="Nueva Materia"
+        android:text="Nueva Producto"
         android:textColor="@android:color/background_light"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.972"
@@ -139,7 +139,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/txtShowSemestreEstudiante"
+        android:id="@+id/txtShowSemestreVendedor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="152dp"
@@ -147,10 +147,10 @@
         android:text="TextView"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtShowFechaNacEstudiante" />
+        app:layout_constraintTop_toBottomOf="@+id/txtShowFechaNacVendedor" />
 
     <TextView
-        android:id="@+id/txtShowGraduadoEstudiante"
+        android:id="@+id/txtShowGraduadoVendedor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="148dp"
@@ -158,10 +158,10 @@
         android:text="TextView"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtShowSemestreEstudiante" />
+        app:layout_constraintTop_toBottomOf="@+id/txtShowSemestreVendedor" />
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/recycler_view_materia"
+        android:id="@+id/recycler_view_producto"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="8dp"
@@ -174,7 +174,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
     <TextView
-        android:id="@+id/txtShowEstudianteId"
+        android:id="@+id/txtShowVendedorId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"

@@ -1,4 +1,4 @@
-package com.example.wilson.estudiantemateria
+package com.example.tienda.vendedorproducto
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
@@ -20,7 +20,7 @@ class DetalleOrdenesActivity : AppCompatActivity() {
 
         txtShowCedula.text = ordenes?.cedulaComprador.toString()
         txtShowSector.text = ordenes?.sector
-        txtShowIdMateria.text = ordenes?.idMateria.toString()
+        txtShowIdProducto.text = ordenes?.idProducto.toString()
 
         btnGuardarDatosOrden.setOnClickListener { v: View? ->
             guardarDatosOrdenDetalles()
@@ -35,9 +35,9 @@ class DetalleOrdenesActivity : AppCompatActivity() {
 
     fun guardarDatosOrdenDetalles(){
         val fechaEnvio = txtFechaEnvio.text.toString()
-        val costoMateria = txtPrecioMateria.text.toString().toInt()
-        val idMateria = txtShowIdMateria.text.toString().toInt()
-        val ordenDetalles = DetallesOrden(0,fechaEnvio,costoMateria,idMateria)
+        val costoProducto = txtPrecioProducto.text.toString().toInt()
+        val idProducto = txtShowIdProducto.text.toString().toInt()
+        val ordenDetalles = DetallesOrden(0,fechaEnvio,costoProducto,idProducto)
         BaseDatosOrdenes.insertarOrdenDetalles(ordenDetalles)
         Alerter.create(this)
                 .setTitle("Orden enviada a CLIENTE")

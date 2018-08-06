@@ -1,9 +1,9 @@
-package com.example.wilson.estudiantemateria
+package com.example.tienda.vendedorproducto
 
 import android.os.Parcel
 import android.os.Parcelable
 
-class Estudiante(var id: Int, var nombres: String, var apellidos: String, var fechaNacimiento: String, var semestreActual: Int, var graduado: Int, var createdAt: Long,
+class Vendedor(var id: Int, var nombres: String, var apellidos: String, var fechaNacimiento: String, var semestreActual: Int, var graduado: Int, var createdAt: Long,
                  var updatedAt: Long) : Parcelable {
     constructor(parcel: Parcel) : this(
             parcel.readInt(),
@@ -31,12 +31,12 @@ class Estudiante(var id: Int, var nombres: String, var apellidos: String, var fe
         return 0
     }
 
-    companion object CREATOR : Parcelable.Creator<Estudiante> {
-        override fun createFromParcel(parcel: Parcel): Estudiante {
-            return Estudiante(parcel)
+    companion object CREATOR : Parcelable.Creator<Vendedor> {
+        override fun createFromParcel(parcel: Parcel): Vendedor {
+            return Vendedor(parcel)
         }
 
-        override fun newArray(size: Int): Array<Estudiante?> {
+        override fun newArray(size: Int): Array<Vendedor?> {
             return arrayOfNulls(size)
         }
     }

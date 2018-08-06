@@ -1,4 +1,4 @@
-package com.example.wilson.estudiantemateria
+package com.example.tienda.vendedorproducto
 
 import android.content.Intent
 import android.graphics.Bitmap
@@ -8,14 +8,14 @@ import android.provider.MediaStore
 import android.support.v7.app.AppCompatActivity
 import android.util.Base64
 import android.view.View
-import kotlinx.android.synthetic.main.activity_materia.*
+import kotlinx.android.synthetic.main.activity_producto.*
 import java.io.ByteArrayOutputStream
 
 
-class MateriaActivity : AppCompatActivity() {
+class ProductoActivity : AppCompatActivity() {
 
-    var materia: Materia? = null
-    var estudianteId: Int = 0
+    var producto: Producto? = null
+    var vendedorId: Int = 0
     private lateinit var imageBitmap: Bitmap
     var tipo = false
     lateinit var myBase64Image:String
@@ -24,21 +24,21 @@ class MateriaActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_materia)
+        setContentView(R.layout.activity_producto)
 
-        estudianteId = intent.getIntExtra("estudianteId", 0)
+        vendedorId = intent.getIntExtra("vendedorId", 0)
 
         val type = intent.getStringExtra("tipo")
 
         if (type.equals("Edit")) {
-            textViewMateria.text = "Editar Materia"
-            materia = intent.getParcelableExtra("materia")
+            textViewProducto.text = "Editar Producto"
+            producto = intent.getParcelableExtra("producto")
             fillFields()
             tipo = true
         }
 
-        btnGuardarMateria.setOnClickListener { v: View? ->
-            crearMateria()
+        btnGuardarProducto.setOnClickListener { v: View? ->
+            crearProducto()
         }
 
         btnTomarFoto.setOnClickListener{v: View? ->
@@ -48,30 +48,30 @@ class MateriaActivity : AppCompatActivity() {
     }
 
     fun fillFields() {
-        txtNombreMateria.setText(materia?.nombre.toString())
-        txtCodigoMateria.setText(materia?.codigo)
-        txtDescripcionMateria.setText(materia?.descripcion)
-        txtActivaMateria.setText(materia?.activo)
-        txtFechaCreacionMateria.setText(materia?.fechaCreacion)
-        txtHorasMateria.setText(materia?.numeroHorasPorSemana.toString())
+        txtNombreProducto.setText(producto?.nombre.toString())
+        txtCodigoProducto.setText(producto?.codigo)
+        txtDescripcionProducto.setText(producto?.descripcion)
+        txtActivaProducto.setText(producto?.activo)
+        txtFechaCreacionProducto.setText(producto?.fechaCreacion)
+        txtHorasProducto.setText(producto?.numeroHorasPorSemana.toString())
     }
 
-    fun crearMateria(){
-        var nombre = txtNombreMateria.text.toString().toInt()
-        var codigo = txtCodigoMateria.text.toString()
-        var descripcion = txtDescripcionMateria.text.toString()
-        var activo = txtActivaMateria.text.toString()
-        var fechaCreacion = txtFechaCreacionMateria.text.toString()
-        var numeroHorasPorSemana = txtHorasMateria.text.toString().toInt()
-        var imagenMateria = myBase64Image
+    fun crearProducto(){
+        var nombre = txtNombreProducto.text.toString().toInt()
+        var codigo = txtCodigoProducto.text.toString()
+        var descripcion = txtDescripcionProducto.text.toString()
+        var activo = txtActivaProducto.text.toString()
+        var fechaCreacion = txtFechaCreacionProducto.text.toString()
+        var numeroHorasPorSemana = txtHorasProducto.text.toString().toInt()
+        var imagenProducto = myBase64Image
 
         if (!tipo){
-            var materia = Materia(0,nombre,codigo,descripcion,activo,fechaCreacion,numeroHorasPorSemana,imagenMateria,estudianteId,0,0)
-            BaseDatosMateria.insertarMateria(materia)
+            var producto = Producto(0,nombre,codigo,descripcion,activo,fechaCreacion,numeroHorasPorSemana,imagenProducto,vendedorId,0,0)
+            BaseDatosProducto.insertarProducto(producto)
 
         }else{
-            var materia2 = Materia(materia?.id!!,nombre,codigo,descripcion,activo,fechaCreacion,numeroHorasPorSemana,imagenMateria,estudianteId,0,0)
-            BaseDatosMateria.actualizarMateria(materia2)
+            var producto2 = Producto(producto?.id!!,nombre,codigo,descripcion,activo,fechaCreacion,numeroHorasPorSemana,imagenProducto,vendedorId,0,0)
+            BaseDatosProducto.actualizarProducto(producto2)
         }
 
         finish()
@@ -99,7 +99,7 @@ class MateriaActivity : AppCompatActivity() {
             myBase64Image = encodeToBase64(imageBitmap, Bitmap.CompressFormat.JPEG, 100)
             myBitmapAgain = decodeBase64(myBase64Image)
 
-            imageViewMateria.setImageBitmap(myBitmapAgain)
+            imageViewProducto.setImageBitmap(myBitmapAgain)
 
 
         }

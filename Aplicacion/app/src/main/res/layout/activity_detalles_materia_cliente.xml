@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DetallesMateriaClienteActivity">
+    tools:context=".DetallesProductoClienteActivity">
 
     <TextView
         android:id="@+id/textView"
@@ -13,7 +13,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
-        android:text="Detalles Materia"
+        android:text="Detalles Producto"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -103,7 +103,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txtShowFechaCreacionM" />
 
     <TextView
-        android:id="@+id/txtShowNombreMateriaM"
+        android:id="@+id/txtShowNombreProductoM"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -117,7 +117,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/txtShowCodigoMateriaM"
+        android:id="@+id/txtShowCodigoProductoM"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -129,7 +129,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.709"
         app:layout_constraintStart_toEndOf="@+id/textView3"
-        app:layout_constraintTop_toBottomOf="@+id/txtShowNombreMateriaM" />
+        app:layout_constraintTop_toBottomOf="@+id/txtShowNombreProductoM" />
 
     <TextView
         android:id="@+id/txtShowDescripcionM"
@@ -144,7 +144,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.678"
         app:layout_constraintStart_toEndOf="@+id/textView4"
-        app:layout_constraintTop_toBottomOf="@+id/txtShowCodigoMateriaM" />
+        app:layout_constraintTop_toBottomOf="@+id/txtShowCodigoProductoM" />
 
     <TextView
         android:id="@+id/txtShowActivoM"
@@ -177,7 +177,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txtShowActivoM" />
 
     <Button
-        android:id="@+id/btnAdquirirMateria"
+        android:id="@+id/btnAdquirirProducto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="28dp"
@@ -186,7 +186,7 @@
         android:layout_marginTop="8dp"
         android:background="@color/colorPrimary"
         android:padding="15dp"
-        android:text="Adquirir Materia"
+        android:text="Adquirir Producto"
         android:textColor="@android:color/background_light"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
@@ -209,7 +209,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/showImageViewMateriaM"
+            android:id="@+id/showImageViewProductoM"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:padding="15dp"

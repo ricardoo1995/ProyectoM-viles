@@ -1,9 +1,9 @@
-package com.example.wilson.estudiantemateria
+package com.example.tienda.vendedorproducto
 
 import android.os.Parcel
 import android.os.Parcelable
 
-class Materia(var id: Int, var nombre: Int, var codigo: String, var descripcion: String, var activo: String, var fechaCreacion: String, var numeroHorasPorSemana: Int, var imagenMateria:String, var estudianteId:Int, var createdAt: Long,
+class Producto(var id: Int, var nombre: Int, var codigo: String, var descripcion: String, var activo: String, var fechaCreacion: String, var numeroHorasPorSemana: Int, var imagenProducto:String, var vendedorId:Int, var createdAt: Long,
               var updatedAt: Long) : Parcelable {
     constructor(parcel: Parcel) : this(
             parcel.readInt(),
@@ -27,8 +27,8 @@ class Materia(var id: Int, var nombre: Int, var codigo: String, var descripcion:
         parcel.writeString(activo)
         parcel.writeString(fechaCreacion)
         parcel.writeInt(numeroHorasPorSemana)
-        parcel.writeString(imagenMateria)
-        parcel.writeInt(estudianteId)
+        parcel.writeString(imagenProducto)
+        parcel.writeInt(vendedorId)
         parcel.writeLong(createdAt)
         parcel.writeLong(updatedAt)
     }
@@ -37,12 +37,12 @@ class Materia(var id: Int, var nombre: Int, var codigo: String, var descripcion:
         return 0
     }
 
-    companion object CREATOR : Parcelable.Creator<Materia> {
-        override fun createFromParcel(parcel: Parcel): Materia {
-            return Materia(parcel)
+    companion object CREATOR : Parcelable.Creator<Producto> {
+        override fun createFromParcel(parcel: Parcel): Producto {
+            return Producto(parcel)
         }
 
-        override fun newArray(size: Int): Array<Materia?> {
+        override fun newArray(size: Int): Array<Producto?> {
             return arrayOfNulls(size)
         }
     }

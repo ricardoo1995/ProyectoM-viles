@@ -48,7 +48,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="76dp"
         android:layout_marginTop="16dp"
-        android:text="Id Materia"
+        android:text="Id Producto"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView15" />
@@ -76,7 +76,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txtShowCedula" />
 
     <TextView
-        android:id="@+id/txtShowIdMateria"
+        android:id="@+id/txtShowIdProducto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="76dp"
@@ -103,14 +103,14 @@
         app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
     <EditText
-        android:id="@+id/txtPrecioMateria"
+        android:id="@+id/txtPrecioProducto"
         android:layout_width="251dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="10dp"
         android:ems="10"
-        android:hint="Precio Materia"
+        android:hint="Precio Producto"
         android:textAlignment="center"
         android:backgroundTint="@color/colorPrimary"
         android:inputType="number"
@@ -147,6 +147,6 @@
         android:textColor="@android:color/background_light"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtPrecioMateria"
+        app:layout_constraintTop_toBottomOf="@+id/txtPrecioProducto"
         app:layout_constraintVertical_bias="0.347" />
 </android.support.constraint.ConstraintLayout>

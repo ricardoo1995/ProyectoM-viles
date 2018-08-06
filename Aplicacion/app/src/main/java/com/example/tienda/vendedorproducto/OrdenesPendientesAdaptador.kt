@@ -1,4 +1,4 @@
-package com.example.wilson.estudiantemateria
+package com.example.tienda.vendedorproducto
 
 import android.content.Intent
 import android.support.v7.widget.RecyclerView
@@ -6,7 +6,7 @@ import android.view.*
 import android.widget.Button
 import android.widget.TextView
 
-class EstudianteClienteAdapter(private val estudianteList: List<Estudiante>) :  RecyclerView.Adapter<EstudianteClienteAdapter.MyViewHolder>(){
+class OrdenesPendientesAdaptador(private val ordenesList: List<Ordenes>) :  RecyclerView.Adapter<OrdenesPendientesAdaptador.MyViewHolder>(){
 
     private var position: Int = 0
 
@@ -20,17 +20,17 @@ class EstudianteClienteAdapter(private val estudianteList: List<Estudiante>) :  
 
     inner class MyViewHolder(view: View) : RecyclerView.ViewHolder(view), View.OnCreateContextMenuListener {
 
-        var nombre: TextView
-        var apellido : TextView
-        var fechaNacimiento: TextView
+        var cedula: TextView
+        var sector : TextView
+        var idProducto: TextView
         var detalles: Button
 
-        lateinit var estudiante: Estudiante
+        lateinit var ordenn: Ordenes
 
         init {
-            nombre = view.findViewById(R.id.txtNombreEstudiante) as TextView
-            apellido = view.findViewById(R.id.txtApellidoEstudiante) as TextView
-            fechaNacimiento = view.findViewById(R.id.txtFechaNacimientoEstudiante) as TextView
+            cedula = view.findViewById(R.id.txtNombreVendedor) as TextView
+            sector = view.findViewById(R.id.txtApellidoVendedor) as TextView
+            idProducto = view.findViewById(R.id.txtFechaNacimientoVendedor) as TextView
             detalles = view.findViewById(R.id.btnDetallesEstudiant) as Button
             view.setOnCreateContextMenuListener(this)
         }
@@ -41,22 +41,22 @@ class EstudianteClienteAdapter(private val estudianteList: List<Estudiante>) :  
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val itemView = LayoutInflater.from(parent.context)
-                .inflate(R.layout.recycler_estudiante_layout, parent, false)
+                .inflate(R.layout.recycler_vendedor_layout, parent, false)
 
         return MyViewHolder(itemView)
 
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        val estudiante = estudianteList[position]
-        holder.nombre.text = estudiante.nombres
-        holder.apellido.text = estudiante.apellidos
-        holder.fechaNacimiento.text = estudiante.fechaNacimiento
-        holder.estudiante = estudiante
+        val orden = ordenesList[position]
+        holder.cedula.text = orden.cedulaComprador.toString()
+        holder.sector.text = orden.sector
+        holder.idProducto.text = orden.idProducto.toString()
+        holder.ordenn = orden
         holder.detalles.setOnClickListener{
             v: View ->
-            val intent = Intent(v.context, DetallesEstudianteClienteActivity::class.java)
-            intent.putExtra("detallesEstudianteCliente", estudiante)
+            val intent = Intent(v.context, DetalleOrdenesActivity::class.java)
+            intent.putExtra("detallesOrden", orden)
 
             v.context.startActivity(intent)
         }
@@ -67,7 +67,7 @@ class EstudianteClienteAdapter(private val estudianteList: List<Estudiante>) :  
     }
 
     override fun getItemCount(): Int {
-        return estudianteList.size
+        return ordenesList.size
     }
 
 

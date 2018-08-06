@@ -1,4 +1,4 @@
-package com.example.wilson.estudiantemateria
+package com.example.tienda.vendedorproducto
 
 import android.content.pm.PackageManager
 import android.support.v7.app.AppCompatActivity

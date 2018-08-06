@@ -27,7 +27,7 @@ module.exports = {
       type:"number"
     },
 
-    estudianteId:{
+    vendedorId:{
       type:"number"
     }
   },

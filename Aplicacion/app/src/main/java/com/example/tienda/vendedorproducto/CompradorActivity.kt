@@ -1,4 +1,4 @@
-package com.example.wilson.estudiantemateria
+package com.example.tienda.vendedorproducto
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -11,13 +11,13 @@ import android.content.Intent
 
 class CompradorActivity : AppCompatActivity() {
 
-    lateinit var idMaterias:String
+    lateinit var idProductos:String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_datos_comprador)
 
-       idMaterias = intent.getStringExtra("idMateria")
+       idProductos = intent.getStringExtra("idProducto")
 
 
         btnEnviarDatosComprador.setOnClickListener { v: View? ->
@@ -28,8 +28,8 @@ class CompradorActivity : AppCompatActivity() {
     fun crearOrden(){
         var cedula = txtCedulaComprador.text.toString().toInt()
         var sector = txtSector.text.toString()
-        var idMateria = idMaterias.toInt()
-        var ordenCompra = Ordenes(0,cedula,sector,idMateria)
+        var idProducto = idProductos.toInt()
+        var ordenCompra = Ordenes(0,cedula,sector,idProducto)
         BaseDatosOrdenes.insertarOrden(ordenCompra)
 
         Alerter.create(this)

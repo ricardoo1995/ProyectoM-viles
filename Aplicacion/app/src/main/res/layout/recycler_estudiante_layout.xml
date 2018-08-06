@@ -7,7 +7,7 @@
 
 
         <TextView
-            android:id="@+id/txtNombreEstudiante"
+            android:id="@+id/txtNombreVendedor"
             android:layout_width="match_parent"
             android:layout_height="35dp"
             android:layout_alignParentStart="true"
@@ -15,25 +15,25 @@
             android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/txtApellidoEstudiante"
+            android:id="@+id/txtApellidoVendedor"
             android:layout_width="210dp"
             android:layout_height="35dp"
-            android:layout_below="@+id/txtNombreEstudiante"
+            android:layout_below="@+id/txtNombreVendedor"
             android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/txtFechaNacimientoEstudiante"
+            android:id="@+id/txtFechaNacimientoVendedor"
             android:layout_width="210dp"
             android:layout_height="35dp"
-            android:layout_below="@+id/txtApellidoEstudiante"
+            android:layout_below="@+id/txtApellidoVendedor"
             android:textSize="18sp" />
 
         <Button
             android:id="@+id/btnDetallesEstudiant"
             android:layout_width="183dp"
             android:layout_height="70dp"
-            android:layout_below="@+id/txtNombreEstudiante"
-            android:layout_toEndOf="@+id/txtApellidoEstudiante"
+            android:layout_below="@+id/txtNombreVendedor"
+            android:layout_toEndOf="@+id/txtApellidoVendedor"
             android:background="@color/colorPrimary"
             android:text="@string/detalles"
             android:textColor="@android:color/background_light" />

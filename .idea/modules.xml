@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ProyectoM-viles.iml" filepath="$PROJECT_DIR$/.idea/modules/ProyectoM-viles.iml" />
+      <module fileurl="file://C:\Users\USRGAM\Documents\GitHub\ProyectoM-viles\.idea\modules\ProyectoM-viles.iml" filepath="C:\Users\USRGAM\Documents\GitHub\ProyectoM-viles\.idea\modules\ProyectoM-viles.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" />
+      <module fileurl="file://C:\Users\USRGAM\Documents\GitHub\ProyectoM-viles\.idea\modules\app\app.iml" filepath="C:\Users\USRGAM\Documents\GitHub\ProyectoM-viles\.idea\modules\app\app.iml" />
     </modules>
   </component>
 </project>

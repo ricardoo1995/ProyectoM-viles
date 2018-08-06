@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EstudianteActivity">
+    tools:context=".VendedorActivity">
 
     <TextView
         android:id="@+id/textViewEntreador"
@@ -13,7 +13,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
-        android:text="@string/estudiante"
+        android:text="@string/vendedor"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnGuardarEstudiante"
+        android:id="@+id/btnGuardarVendedor"
         android:layout_width="310dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="92dp"
@@ -36,7 +36,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/txtNombreEstudiante"
+        android:id="@+id/txtNombreVendedor"
         android:layout_width="288dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -52,7 +52,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textViewEntreador" />
 
     <EditText
-        android:id="@+id/txtApellidoEstudiante"
+        android:id="@+id/txtApellidoVendedor"
         android:layout_width="288dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -65,10 +65,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtNombreEstudiante" />
+        app:layout_constraintTop_toBottomOf="@+id/txtNombreVendedor" />
 
     <EditText
-        android:id="@+id/txtFechaNacimientoEstudiante"
+        android:id="@+id/txtFechaNacimientoVendedor"
         android:layout_width="287dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -81,10 +81,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.395"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtApellidoEstudiante" />
+        app:layout_constraintTop_toBottomOf="@+id/txtApellidoVendedor" />
 
     <EditText
-        android:id="@+id/txtSemestreEstudiante"
+        android:id="@+id/txtSemestreVendedor"
         android:layout_width="287dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -97,10 +97,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.395"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtFechaNacimientoEstudiante" />
+        app:layout_constraintTop_toBottomOf="@+id/txtFechaNacimientoVendedor" />
 
     <Switch
-        android:id="@+id/switchGraduadoEstudiante"
+        android:id="@+id/switchGraduadoVendedor"
         android:layout_width="288dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -112,6 +112,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.39"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtSemestreEstudiante" />
+        app:layout_constraintTop_toBottomOf="@+id/txtSemestreVendedor" />
 
 </android.support.constraint.ConstraintLayout>
