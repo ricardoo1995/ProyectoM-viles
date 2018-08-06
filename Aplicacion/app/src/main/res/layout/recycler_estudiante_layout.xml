@@ -29,7 +29,7 @@
             android:textSize="18sp" />
 
         <Button
-            android:id="@+id/btnDetallesEstudiant"
+            android:id="@+id/btnDetallesVendedo"
             android:layout_width="183dp"
             android:layout_height="70dp"
             android:layout_below="@+id/txtNombreVendedor"

@@ -15,7 +15,7 @@ module.exports = {
     precio: {
       type: "number"
     },
-    idMateria:{
+    idProducto:{
       type: "number"
     }
 

@@ -31,7 +31,7 @@ class ProductoClienteAdapter(private val productoList: List<Producto>) :  Recycl
             codigo = view.findViewById(R.id.txtNombreVendedor) as TextView
             descripcion = view.findViewById(R.id.txtApellidoVendedor) as TextView
             activo = view.findViewById(R.id.txtFechaNacimientoVendedor) as TextView
-            detalles = view.findViewById(R.id.btnDetallesEstudiant) as Button
+            detalles = view.findViewById(R.id.btnDetallesVendedo) as Button
             view.setOnCreateContextMenuListener(this)
         }
 

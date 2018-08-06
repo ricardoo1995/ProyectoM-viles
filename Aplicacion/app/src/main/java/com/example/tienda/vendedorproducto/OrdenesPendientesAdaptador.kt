@@ -31,7 +31,7 @@ class OrdenesPendientesAdaptador(private val ordenesList: List<Ordenes>) :  Recy
             cedula = view.findViewById(R.id.txtNombreVendedor) as TextView
             sector = view.findViewById(R.id.txtApellidoVendedor) as TextView
             idProducto = view.findViewById(R.id.txtFechaNacimientoVendedor) as TextView
-            detalles = view.findViewById(R.id.btnDetallesEstudiant) as Button
+            detalles = view.findViewById(R.id.btnDetallesVendedo) as Button
             view.setOnCreateContextMenuListener(this)
         }
 

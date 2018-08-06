@@ -15,7 +15,7 @@ module.exports = {
     sector: {
      type: "string"
     },
-    idMateria: {
+    idProducto: {
      type: "number"
     }
 
