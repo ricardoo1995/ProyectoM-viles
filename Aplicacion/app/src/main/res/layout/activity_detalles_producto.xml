@@ -60,7 +60,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
         android:layout_marginTop="8dp"
-        android:text="Activa"
+        android:text="Marca"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
@@ -82,13 +82,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="68dp"
         android:layout_marginTop="8dp"
-        android:text="Horas"
+        android:text="Valor"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <TextView
-        android:id="@+id/txtShowHoras"
+        android:id="@+id/txtShowValor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="4dp"
@@ -100,7 +100,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.723"
         app:layout_constraintStart_toEndOf="@+id/textView9"
-        app:layout_constraintTop_toBottomOf="@+id/txtShowFechaCreacion" />
+        app:layout_constraintTop_toBottomOf="@+id/txtShowModelo" />
 
     <TextView
         android:id="@+id/txtShowNombreProducto"
@@ -148,7 +148,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txtShowCodigoProducto" />
 
     <TextView
-        android:id="@+id/txtShowActivo"
+        android:id="@+id/txtShowMarca"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -163,7 +163,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txtShowDescripcion" />
 
     <TextView
-        android:id="@+id/txtShowFechaCreacion"
+        android:id="@+id/txtShowModelo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -175,7 +175,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.566"
         app:layout_constraintStart_toEndOf="@+id/textView6"
-        app:layout_constraintTop_toBottomOf="@+id/txtShowActivo" />
+        app:layout_constraintTop_toBottomOf="@+id/txtShowMarca" />
 
     <LinearLayout
         android:id="@+id/linearLayout2"

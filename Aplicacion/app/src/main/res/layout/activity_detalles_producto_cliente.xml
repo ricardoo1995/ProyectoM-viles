@@ -60,7 +60,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
         android:layout_marginTop="8dp"
-        android:text="Activa"
+        android:text="Marca"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
@@ -82,13 +82,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="68dp"
         android:layout_marginTop="8dp"
-        android:text="Horas"
+        android:text="Valor"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <TextView
-        android:id="@+id/txtShowHorasM"
+        android:id="@+id/txtShowValorM"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -100,7 +100,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.737"
         app:layout_constraintStart_toEndOf="@+id/textView9"
-        app:layout_constraintTop_toBottomOf="@+id/txtShowFechaCreacionM" />
+        app:layout_constraintTop_toBottomOf="@+id/txtShowModeloM" />
 
     <TextView
         android:id="@+id/txtShowNombreProductoM"
@@ -147,7 +147,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txtShowCodigoProductoM" />
 
     <TextView
-        android:id="@+id/txtShowActivoM"
+        android:id="@+id/txtShowMarcaM"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -162,7 +162,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txtShowDescripcionM" />
 
     <TextView
-        android:id="@+id/txtShowFechaCreacionM"
+        android:id="@+id/txtShowModeloM"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -174,7 +174,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.602"
         app:layout_constraintStart_toEndOf="@+id/textView6"
-        app:layout_constraintTop_toBottomOf="@+id/txtShowActivoM" />
+        app:layout_constraintTop_toBottomOf="@+id/txtShowMarcaM" />
 
     <Button
         android:id="@+id/btnAdquirirProducto"

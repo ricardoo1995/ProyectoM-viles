@@ -24,9 +24,9 @@ class DetallesProductoActivity : AppCompatActivity() {
         txtShowNombreProducto.text = producto?.nombre.toString()
         txtShowCodigoProducto.text = producto?.codigo
         txtShowDescripcion.text = producto?.descripcion
-        txtShowActivo.text = producto?.activo
-        txtShowFechaCreacion.text = producto?.fechaCreacion
-        txtShowHoras.text = producto?.numeroHorasPorSemana.toString()
+        txtShowMarca.text = producto?.marca
+        txtShowModelo.text = producto?.modelo
+        txtShowValor.text = producto?.valorUnitario.toString()
 
         myBitmapAgain = decodeBase64(producto?.imagenProducto.toString()!!)
         showImageViewProducto.setImageBitmap(myBitmapAgain)

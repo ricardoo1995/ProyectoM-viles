@@ -22,7 +22,7 @@ class ProductoAdapter(private val productoList: List<Producto>) :  RecyclerView.
 
         var codigo: TextView
         var descripcion : TextView
-        var activo: TextView
+        var marca: TextView
         var detalles: Button
 
         lateinit var productoM1: Producto
@@ -30,7 +30,7 @@ class ProductoAdapter(private val productoList: List<Producto>) :  RecyclerView.
         init {
             codigo = view.findViewById(R.id.txtNombreVendedor) as TextView
             descripcion = view.findViewById(R.id.txtApellidoVendedor) as TextView
-            activo = view.findViewById(R.id.txtFechaNacimientoVendedor) as TextView
+            marca = view.findViewById(R.id.txtFechaNacimientoVendedor) as TextView
             detalles = view.findViewById(R.id.btnDetallesVendedo) as Button
             view.setOnCreateContextMenuListener(this)
         }
@@ -53,7 +53,7 @@ class ProductoAdapter(private val productoList: List<Producto>) :  RecyclerView.
         val productoM = productoList[position]
         holder.codigo.text = productoM.codigo
         holder.descripcion.text = productoM.descripcion
-        holder.activo.text = productoM.activo
+        holder.marca.text = productoM.marca
         holder.productoM1 = productoM
         holder.detalles.setOnClickListener{
             v: View ->

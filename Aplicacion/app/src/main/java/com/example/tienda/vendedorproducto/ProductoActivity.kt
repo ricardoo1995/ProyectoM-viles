@@ -51,26 +51,26 @@ class ProductoActivity : AppCompatActivity() {
         txtNombreProducto.setText(producto?.nombre.toString())
         txtCodigoProducto.setText(producto?.codigo)
         txtDescripcionProducto.setText(producto?.descripcion)
-        txtActivaProducto.setText(producto?.activo)
-        txtFechaCreacionProducto.setText(producto?.fechaCreacion)
-        txtHorasProducto.setText(producto?.numeroHorasPorSemana.toString())
+        txtMarcaProducto.setText(producto?.marca)
+        txtModeloProducto.setText(producto?.modelo)
+        txtValorProducto.setText(producto?.valorUnitario.toString())
     }
 
     fun crearProducto(){
-        var nombre = txtNombreProducto.text.toString().toInt()
+        var nombre = txtNombreProducto.text.toString()
         var codigo = txtCodigoProducto.text.toString()
         var descripcion = txtDescripcionProducto.text.toString()
-        var activo = txtActivaProducto.text.toString()
-        var fechaCreacion = txtFechaCreacionProducto.text.toString()
-        var numeroHorasPorSemana = txtHorasProducto.text.toString().toInt()
+        var marca = txtMarcaProducto.text.toString()
+        var modelo = txtModeloProducto.text.toString()
+        var valorUnitario = txtValorProducto.text.toString().toInt()
         var imagenProducto = myBase64Image
 
         if (!tipo){
-            var producto = Producto(0,nombre,codigo,descripcion,activo,fechaCreacion,numeroHorasPorSemana,imagenProducto,vendedorId,0,0)
+            var producto = Producto(0,nombre,codigo,descripcion,marca,modelo,valorUnitario,imagenProducto,vendedorId,0,0)
             BaseDatosProducto.insertarProducto(producto)
 
         }else{
-            var producto2 = Producto(producto?.id!!,nombre,codigo,descripcion,activo,fechaCreacion,numeroHorasPorSemana,imagenProducto,vendedorId,0,0)
+            var producto2 = Producto(producto?.id!!,nombre,codigo,descripcion,marca,modelo,valorUnitario,imagenProducto,vendedorId,0,0)
             BaseDatosProducto.actualizarProducto(producto2)
         }
 

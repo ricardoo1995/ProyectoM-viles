@@ -14,7 +14,7 @@ class BaseDatosProducto{
     companion object {
 
         fun insertarProducto(producto:Producto){
-            "http://192.168.100.134:1337/Producto".httpPost(listOf("nombre" to producto.nombre, "codigo" to producto.codigo, "descripcion" to producto.descripcion, "activo" to producto.activo, "fechaCreacion" to producto.fechaCreacion,"numeroHorasPorSemana" to producto.numeroHorasPorSemana,"imagenProducto" to producto.imagenProducto,"vendedorId" to producto.vendedorId ))
+            "http://192.168.100.134:1337/Producto".httpPost(listOf("nombre" to producto.nombre, "codigo" to producto.codigo, "descripcion" to producto.descripcion, "marca" to producto.marca, "modelo" to producto.modelo,"valorUnitario" to producto.valorUnitario,"imagenProducto" to producto.imagenProducto,"vendedorId" to producto.vendedorId ))
                     .responseString { request, _, result ->
                         Log.d("http-ejemplo", request.toString())
                     }
@@ -28,7 +28,7 @@ class BaseDatosProducto{
         }
 
         fun actualizarProducto(producto: Producto) {
-            "http://192.168.100.134:1337/Producto/${producto.id}".httpPut(listOf("nombre" to producto.nombre, "codigo" to producto.codigo, "descripcion" to producto.descripcion, "activo" to producto.activo, "fechaCreacion" to producto.fechaCreacion, "numeroHorasPorSemana" to producto.numeroHorasPorSemana))
+            "http://192.168.100.134:1337/Producto/${producto.id}".httpPut(listOf("nombre" to producto.nombre, "codigo" to producto.codigo, "descripcion" to producto.descripcion, "marca" to producto.marca, "modelo" to producto.modelo, "valorUnitario" to producto.valorUnitario))
                     .responseString { request, _, result ->
                         Log.d("http-ejemplo", request.toString())
                     }
@@ -47,14 +47,14 @@ class BaseDatosProducto{
 
             array.forEach {
                 val id = it["id"] as Int
-                val nombre = it["nombre"] as Int
+                val nombre = it["nombre"] as String
                 val codigo = it["codigo"] as String
                 val descripcion = it["descripcion"] as String
-                val activo = it["activo"] as String
-                val fechaCreacion = it["fechaCreacion"] as String
-                val numeroHorasPorSemana = it["numeroHorasPorSemana"] as Int
+                val marca = it["marca"] as String
+                val modelo = it["modelo"] as String
+                val valorUnitario = it["valorUnitario"] as Int
                 val imagenProducto = it["imagenProducto"] as String
-                val productos = Producto(id,nombre,codigo,descripcion,activo,fechaCreacion,numeroHorasPorSemana,imagenProducto,vendedorId,0,0)
+                val productos = Producto(id,nombre,codigo,descripcion,marca,modelo,valorUnitario,imagenProducto,vendedorId,0,0)
                 producto.add(productos)
             }
             return producto

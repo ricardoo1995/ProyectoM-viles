@@ -7,21 +7,31 @@ module.exports = {
       required: true
     },
     codigo: {
-      type: 'number',
+      type: 'string',
       required: true
     },
-    valorUnitario: {
-      type: 'number',
+    descripcion: {
+      type: 'string',
       required: true
     },
     marca: {
       type: 'string',
       required: true
     },
-    garantia: {
+    modelo: {
+      type: 'string',
+      required: true
+    },
+    valorUnitario: {
       type: 'number',
       required: true
     },
+    idVendedor: {
+      type: 'number',
+
+    },
+
+
 
 
   },

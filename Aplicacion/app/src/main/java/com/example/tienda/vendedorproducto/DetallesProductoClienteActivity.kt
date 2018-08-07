@@ -25,9 +25,9 @@ class DetallesProductoClienteActivity : AppCompatActivity() {
         txtShowNombreProductoM.text = producto?.nombre.toString()
         txtShowCodigoProductoM.text = producto?.codigo
         txtShowDescripcionM.text = producto?.descripcion
-        txtShowActivoM.text = producto?.activo
-        txtShowFechaCreacionM.text = producto?.fechaCreacion
-        txtShowHorasM.text = producto?.numeroHorasPorSemana.toString()
+        txtShowMarcaM.text = producto?.marca
+        txtShowModeloM.text = producto?.modelo
+        txtShowValorM.text = producto?.valorUnitario.toString()
 
 
 
