@@ -2,11 +2,11 @@ module.exports = {
 
   attributes: {
 
-    nombre: {
+    nombres: {
       type: 'string',
       required: true
     },
-    apellido: {
+    apellidos: {
       type: 'string',
       required: true
     },
@@ -18,10 +18,7 @@ module.exports = {
       type: 'string',
       required: true
     },
-    direccion: {
-      type: 'string',
-      required: true
-    },
+
     fechaNacimiento: {
       type: 'string',
       required: true

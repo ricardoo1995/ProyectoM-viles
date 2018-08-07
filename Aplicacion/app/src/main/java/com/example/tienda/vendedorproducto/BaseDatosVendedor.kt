@@ -12,7 +12,7 @@ class BaseDatosVendedor{
     companion object {
 
         fun insertarVendedor(vendedor:Vendedor){
-            "http://192.168.100.134:1337/Vendedor".httpPost(listOf("nombres" to vendedor.nombres, "apellidos" to vendedor.apellidos, "fechaNacimiento" to vendedor.fechaNacimiento, "semestreActual" to vendedor.semestreActual, "graduado" to vendedor.graduado))
+            "http://192.168.100.134:1337/Vendedor".httpPost(listOf("nombres" to vendedor.nombres, "apellidos" to vendedor.apellidos, "fechaNacimiento" to vendedor.fechaNacimiento, "cedula" to vendedor.cedula, "telefono" to vendedor.telefono))
                     .responseString { request, _, result ->
                         Log.d("http-ejemplo", request.toString())
                     }
@@ -26,7 +26,7 @@ class BaseDatosVendedor{
         }
 
         fun actualizarVendedor(vendedor: Vendedor) {
-            "http://192.168.100.134:1337/Vendedor/${vendedor.id}".httpPut(listOf("nombres" to vendedor.nombres, "apellidos" to vendedor.apellidos, "fechaNacimiento" to vendedor.fechaNacimiento, "semestreActual" to vendedor.semestreActual, "graduado" to vendedor.graduado))
+            "http://192.168.100.134:1337/Vendedor/${vendedor.id}".httpPut(listOf("nombres" to vendedor.nombres, "apellidos" to vendedor.apellidos, "fechaNacimiento" to vendedor.fechaNacimiento, "cedula" to vendedor.cedula, "telefono" to vendedor.telefono))
                     .responseString { request, _, result ->
                         Log.d("http-ejemplo", request.toString())
                     }
@@ -48,9 +48,9 @@ class BaseDatosVendedor{
                 val nombres = it["nombres"] as String
                 val apellidos = it["apellidos"] as String
                 val fechaNacimiento = it["fechaNacimiento"] as String
-                val semestreActual = it["semestreActual"] as Int
-                val graduado = it["graduado"] as Int
-                val vendedor = Vendedor(id, nombres, apellidos, fechaNacimiento, semestreActual, graduado, 0, 0)
+                val cedula = it["cedula"] as String
+                val telefono = it["telefono"] as String
+                val vendedor = Vendedor(id, nombres, apellidos, fechaNacimiento, cedula, telefono, 0, 0)
                 vendedores.add(vendedor)
             }
             return vendedores
@@ -72,9 +72,9 @@ class BaseDatosVendedor{
                 val nombres = it["nombres"] as String
                 val apellidos = it["apellidos"] as String
                 val fechaNacimiento = it["fechaNacimiento"] as String
-                val semestreActual = it["semestreActual"] as Int
-                val graduado = it["graduado"] as Int
-                val vendedor = Vendedor(id, nombres, apellidos, fechaNacimiento, semestreActual, graduado, 0, 0)
+                val cedula = it["cedula"] as String
+                val telefono = it["telefono"] as String
+                val vendedor = Vendedor(id, nombres, apellidos, fechaNacimiento, cedula, telefono, 0, 0)
                 vendedores.add(vendedor)
             }
             return vendedores

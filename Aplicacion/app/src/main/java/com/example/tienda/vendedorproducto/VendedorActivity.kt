@@ -33,27 +33,26 @@ class VendedorActivity : AppCompatActivity() {
         txtNombreVendedor.setText(vendedor?.nombres)
         txtApellidoVendedor.setText(vendedor?.apellidos)
         txtFechaNacimientoVendedor.setText(vendedor?.fechaNacimiento)
-        txtSemestreVendedor.setText(vendedor?.semestreActual.toString())
-        if (vendedor?.graduado == 1) {
-            switchGraduadoVendedor.toggle()
-        }
+        txtCedulaVendedor.setText(vendedor?.cedula.toString())
+        txtTelefonoVendedor.setText(vendedor?.telefono.toString())
+
     }
 
     fun crearVendedor(){
         var nombres = txtNombreVendedor.text.toString()
         var apellidos = txtApellidoVendedor.text.toString()
         var fecha = txtFechaNacimientoVendedor.text.toString()
-        var semestreActual = txtSemestreVendedor.text.toString().toInt()
-        var graduado = if (switchGraduadoVendedor.isChecked) 1 else 0
+        var cedula = txtCedulaVendedor.text.toString()
+        var telefono = txtTelefonoVendedor.text.toString()
 
 
         if (!tipo){
 
-            var vendedor = Vendedor(0, nombres, apellidos, fecha, semestreActual, graduado,0,0)
+            var vendedor = Vendedor(0, nombres, apellidos, fecha, cedula, telefono,0,0)
             BaseDatosVendedor.insertarVendedor(vendedor)
 
         }else{
-            var vendedor = Vendedor(vendedor?.id!!, nombres, apellidos, fecha, semestreActual, graduado,0,0)
+            var vendedor = Vendedor(vendedor?.id!!, nombres, apellidos, fecha, cedula, telefono,0,0)
             BaseDatosVendedor.actualizarVendedor(vendedor)
         }
         iraActividadVendedor()
@@ -62,7 +61,7 @@ class VendedorActivity : AppCompatActivity() {
 
     fun iraActividadVendedor(){
         val intent = Intent(this, RegistrarUsuarios::class.java)
-        intent.putExtra("valorRol","VENDEDOR")
+        intent.putExtra("valorRol","ADMINISTRADOR")
         startActivity(intent)
     }
 }

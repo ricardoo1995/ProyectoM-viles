@@ -30,8 +30,8 @@ class DetallesVendedorActivity : AppCompatActivity() {
         txtShowNombreVendedor.text = vendedor?.nombres
         txtShowApellidoVendedor.text = vendedor?.apellidos
         txtShowFechaNacVendedor.text = vendedor?.fechaNacimiento
-        txtShowSemestreVendedor.text = vendedor?.semestreActual.toString()
-        txtShowGraduadoVendedor.text = if(vendedor?.graduado == 1) "Si" else "No"
+        txtShowCedulaVendedor.text = vendedor?.cedula.toString()
+        txtShowTelefonoVendedor.text = vendedor?.telefono
 
 
 

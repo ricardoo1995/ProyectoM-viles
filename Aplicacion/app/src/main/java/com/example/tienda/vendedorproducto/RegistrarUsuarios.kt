@@ -20,10 +20,10 @@ class RegistrarUsuarios : AppCompatActivity() {
         rol = intent.getStringExtra("valorRol")
 
 
-        if (rol.equals("VENDEDOR",true)){
+        if (rol.equals("ADMINISTRADOR",true)){
             btnBuscarVendedores.visibility = View.INVISIBLE
 
-        }else if (rol.equals("DELIVERY",true)){
+        }else if (rol.equals("FACTURA",true)){
             btnBuscarVendedores.visibility = View.INVISIBLE
             btnCrearVendedor.visibility = View.INVISIBLE
             btnListarVendedor.visibility = View.INVISIBLE

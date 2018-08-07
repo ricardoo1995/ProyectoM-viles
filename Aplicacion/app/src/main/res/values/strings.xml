@@ -12,17 +12,17 @@
     <string name="nombre">Nombre</string>
     <string name="apellido">Apellido</string>
     <string name="fecha_nacimiento">Fecha Nacimiento</string>
-    <string name="semestre">Semestre</string>
-    <string name="graduado">Graduado</string>
+    <string name="semestre">Cedula</string>
+    <string name="telefono">Telefono</string>
     <string name="guardar">GUARDAR</string>
     <string name="detalles">DETALLES</string>
     <string name="creacion_producto">Creacion Producto</string>
     <string name="editar">Editar</string>
     <string name="eliminar">Eliminar</string>
     <string-array name="roles">
+        <item>ADMINISTRADOR</item>
         <item>VENDEDOR</item>
         <item>CLIENTE</item>
-        <item>DELIVERY</item>
     </string-array>
     <string name="title_activity_google_maps">Map</string>
 </resources>

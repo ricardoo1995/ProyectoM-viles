@@ -25,7 +25,7 @@
         android:id="@+id/btnGuardarVendedor"
         android:layout_width="310dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="92dp"
+        android:layout_marginBottom="68dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:background="@color/colorPrimary"
@@ -84,7 +84,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txtApellidoVendedor" />
 
     <EditText
-        android:id="@+id/txtSemestreVendedor"
+        android:id="@+id/txtCedulaVendedor"
         android:layout_width="287dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -99,19 +99,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtFechaNacimientoVendedor" />
 
-    <Switch
-        android:id="@+id/switchGraduadoVendedor"
-        android:layout_width="288dp"
+    <EditText
+        android:id="@+id/txtTelefonoVendedor"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
-        android:text="@string/graduado"
-        android:textColorLink="?attr/colorPrimaryDark"
-        android:textSize="18sp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="telefono"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/btnGuardarVendedor"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.39"
+        app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtSemestreVendedor" />
+        app:layout_constraintTop_toBottomOf="@+id/txtCedulaVendedor"
+        app:layout_constraintVertical_bias="0.3" />
 
 </android.support.constraint.ConstraintLayout>
