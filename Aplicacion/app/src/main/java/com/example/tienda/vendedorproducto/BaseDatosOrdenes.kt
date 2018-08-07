@@ -11,14 +11,14 @@ import com.github.kittinunf.fuel.httpPost
 class BaseDatosOrdenes{
     companion object {
         fun insertarOrden(ordenes: Ordenes){
-            "http://192.168.100.189:1337/Orden".httpPost(listOf("cedulaIdentidad" to ordenes.cedulaComprador, "sector" to ordenes.sector, "idProducto" to ordenes.idProducto))
+            "http://192.168.100.134:1337/Orden".httpPost(listOf("cedulaIdentidad" to ordenes.cedulaComprador, "sector" to ordenes.sector, "idProducto" to ordenes.idProducto))
                     .responseString { request, _, result ->
                         Log.d("http-ejemplo", request.toString())
                     }
         }
 
         fun insertarOrdenDetalles(detallesOrden: DetallesOrden){
-            "http://192.168.100.189:1337/DetalleOrden".httpPost(listOf("fechaEnvio" to detallesOrden.fechaEnvio, "precio" to detallesOrden.precio, "idProducto" to detallesOrden.idProducto))
+            "http://192.168.100.134:1337/DetalleOrden".httpPost(listOf("fechaEnvio" to detallesOrden.fechaEnvio, "precio" to detallesOrden.precio, "idProducto" to detallesOrden.idProducto))
                     .responseString { request, _, result ->
                         Log.d("http-ejemplo", request.toString())
                     }
@@ -30,7 +30,7 @@ class BaseDatosOrdenes{
             val orden: ArrayList<Ordenes> = ArrayList()
             val policy = StrictMode.ThreadPolicy.Builder().permitAll().build()
             StrictMode.setThreadPolicy(policy)
-            val (request, response, result) = "http://192.168.100.189:1337/Orden".httpGet().responseString()
+            val (request, response, result) = "http://192.168.100.134:1337/Orden".httpGet().responseString()
             val jsonStringPokemon = result.get()
 
             val parser = Parser()

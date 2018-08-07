@@ -26,10 +26,7 @@ module.exports = {
       type: 'string',
       required: true
     },
-    orden:{
-      collection: 'DetalleOrden',
-      via: 'idOrden'
-    }
+
 
   },
 

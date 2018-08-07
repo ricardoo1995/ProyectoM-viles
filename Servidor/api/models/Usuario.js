@@ -8,15 +8,15 @@
 module.exports = {
 
   attributes: {
-    username: {
-      type: 'string',
-      required: true
+    rol:{
+      type:"string"
     },
-    password: {
-      type: 'string',
-      required: true
+    username:{
+      type:"string"
     },
-
+    password:{
+      type:"string"
+    }
   },
 
 };
