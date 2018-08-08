@@ -90,7 +90,7 @@ class DetallesVendedorActivity : AppCompatActivity() {
                 return true
             }
             R.id.item_menu_compartir -> {
-                val addressees = arrayOf("danny.alvarez@epn.edu.ec")
+                val addressees = arrayOf("ricardo.ortiz02@epn.edu.ec")
                 val intent = Intent(Intent.ACTION_SEND)
                 intent.type = "text/html"
                 intent.putExtra(Intent.EXTRA_EMAIL, addressees)
