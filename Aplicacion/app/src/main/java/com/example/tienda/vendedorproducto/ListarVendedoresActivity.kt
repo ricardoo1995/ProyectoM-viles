@@ -59,10 +59,23 @@ class ListarVendedoresActivity : AppCompatActivity() {
                 dialogo.show()
                 return true
             }
+            R.id.item_menu_compartir -> {
+                val addressees = arrayOf("danny.alvarez@epn.edu.ec")
+                val intent = Intent(Intent.ACTION_SEND)
+                intent.type = "text/html"
+                intent.putExtra(Intent.EXTRA_EMAIL, addressees)
+                intent.putExtra(Intent.EXTRA_SUBJECT, "Vendedor Recomendado")
+                intent.putExtra(Intent.EXTRA_TEXT, "Te recomiendo  este vendedor")
+                startActivity(intent)
+                finish()
+                return true
+            }
             else -> {
                 Log.i("menu", "Todos los demas")
                 return super.onOptionsItemSelected(item)
             }
         }
+
     }
+
 }

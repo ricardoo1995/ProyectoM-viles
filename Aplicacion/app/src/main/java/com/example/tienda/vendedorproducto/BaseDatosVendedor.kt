@@ -12,21 +12,21 @@ class BaseDatosVendedor{
     companion object {
 
         fun insertarVendedor(vendedor:Vendedor){
-            "http://192.168.100.134:1337/Vendedor".httpPost(listOf("nombres" to vendedor.nombres, "apellidos" to vendedor.apellidos, "fechaNacimiento" to vendedor.fechaNacimiento, "cedula" to vendedor.cedula, "telefono" to vendedor.telefono))
+            "http://172.29.22.4:1337/Vendedor".httpPost(listOf("nombres" to vendedor.nombres, "apellidos" to vendedor.apellidos, "fechaNacimiento" to vendedor.fechaNacimiento, "cedula" to vendedor.cedula, "telefono" to vendedor.telefono))
                     .responseString { request, _, result ->
                         Log.d("http-ejemplo", request.toString())
                     }
         }
 
         fun eliminarVendedor(id: Int) {
-            "http://192.168.100.134:1337/Vendedor/$id".httpDelete()
+            "http://172.29.22.4:1337/Vendedor/$id".httpDelete()
                     .responseString { request, response, result ->
                         Log.d("http-ejemplo", request.toString())
                     }
         }
 
         fun actualizarVendedor(vendedor: Vendedor) {
-            "http://192.168.100.134:1337/Vendedor/${vendedor.id}".httpPut(listOf("nombres" to vendedor.nombres, "apellidos" to vendedor.apellidos, "fechaNacimiento" to vendedor.fechaNacimiento, "cedula" to vendedor.cedula, "telefono" to vendedor.telefono))
+            "http://172.29.22.4:1337/Vendedor/${vendedor.id}".httpPut(listOf("nombres" to vendedor.nombres, "apellidos" to vendedor.apellidos, "fechaNacimiento" to vendedor.fechaNacimiento, "cedula" to vendedor.cedula, "telefono" to vendedor.telefono))
                     .responseString { request, _, result ->
                         Log.d("http-ejemplo", request.toString())
                     }
@@ -36,7 +36,7 @@ class BaseDatosVendedor{
             val vendedores: ArrayList<Vendedor> = ArrayList()
             val policy = StrictMode.ThreadPolicy.Builder().permitAll().build()
             StrictMode.setThreadPolicy(policy)
-            val (request, response, result) = "http://192.168.100.134:1337/Vendedor".httpGet().responseString()
+            val (request, response, result) = "http://172.29.22.4:1337/Vendedor".httpGet().responseString()
             val jsonStringVendedor = result.get()
 
             val parser = Parser()
@@ -60,7 +60,7 @@ class BaseDatosVendedor{
             val vendedores: ArrayList<Vendedor> = ArrayList()
             val policy = StrictMode.ThreadPolicy.Builder().permitAll().build()
             StrictMode.setThreadPolicy(policy)
-            val (request, response, result) = "http://192.168.100.134:1337/Vendedor?nombres=${nombre}".httpGet().responseString()
+            val (request, response, result) = "http://172.29.22.4:1337/Vendedor?nombres=${nombre}".httpGet().responseString()
             val jsonStringVendedor = result.get()
 
             val parser = Parser()

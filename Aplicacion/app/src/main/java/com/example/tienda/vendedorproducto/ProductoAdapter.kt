@@ -38,6 +38,8 @@ class ProductoAdapter(private val productoList: List<Producto>) :  RecyclerView.
         override fun onCreateContextMenu(menu: ContextMenu?, v: View?, menuInfo: ContextMenu.ContextMenuInfo?) {
              menu?.add(Menu.NONE, R.id.item_menu_editar, Menu.NONE, "Editar")
              menu?.add(Menu.NONE, R.id.item_menu_eliminar, Menu.NONE, "Eliminar")
+             menu?.add(Menu.NONE, R.id.item_menu_compartir, Menu.NONE, "Compartit")
+
         }
     }
 

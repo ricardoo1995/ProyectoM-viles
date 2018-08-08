@@ -9,5 +9,7 @@
         android:id="@+id/item_menu_eliminar"
         android:title="@string/eliminar" />
 
-
+    <item
+        android:id="@+id/item_menu_compartir"
+        android:title="Compartir" />
 </menu>

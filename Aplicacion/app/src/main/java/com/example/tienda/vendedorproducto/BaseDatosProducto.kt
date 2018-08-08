@@ -14,21 +14,21 @@ class BaseDatosProducto{
     companion object {
 
         fun insertarProducto(producto:Producto){
-            "http://192.168.100.134:1337/Producto".httpPost(listOf("nombre" to producto.nombre, "codigo" to producto.codigo, "descripcion" to producto.descripcion, "marca" to producto.marca, "modelo" to producto.modelo,"valorUnitario" to producto.valorUnitario,"imagenProducto" to producto.imagenProducto,"vendedorId" to producto.vendedorId ))
+            "http://172.29.22.4:1337/Producto".httpPost(listOf("nombre" to producto.nombre, "codigo" to producto.codigo, "descripcion" to producto.descripcion, "marca" to producto.marca, "modelo" to producto.modelo,"valorUnitario" to producto.valorUnitario,"imagenProducto" to producto.imagenProducto,"vendedorId" to producto.vendedorId ))
                     .responseString { request, _, result ->
                         Log.d("http-ejemplo", request.toString())
                     }
         }
 
         fun eliminarProducto(id: Int) {
-            "http://192.168.100.134:1337/Producto/$id".httpDelete()
+            "http://172.29.22.4:1337/Producto/$id".httpDelete()
                     .responseString { request, response, result ->
                         Log.d("http-ejemplo", request.toString())
                     }
         }
 
         fun actualizarProducto(producto: Producto) {
-            "http://192.168.100.134:1337/Producto/${producto.id}".httpPut(listOf("nombre" to producto.nombre, "codigo" to producto.codigo, "descripcion" to producto.descripcion, "marca" to producto.marca, "modelo" to producto.modelo, "valorUnitario" to producto.valorUnitario))
+            "http://172.29.22.4:1337/Producto/${producto.id}".httpPut(listOf("nombre" to producto.nombre, "codigo" to producto.codigo, "descripcion" to producto.descripcion, "marca" to producto.marca, "modelo" to producto.modelo, "valorUnitario" to producto.valorUnitario))
                     .responseString { request, _, result ->
                         Log.d("http-ejemplo", request.toString())
                     }
@@ -38,7 +38,7 @@ class BaseDatosProducto{
             val producto: ArrayList<Producto> = ArrayList()
             val policy = StrictMode.ThreadPolicy.Builder().permitAll().build()
             StrictMode.setThreadPolicy(policy)
-            val (request, response, result) = "http://192.168.100.134:1337/Producto?vendedorId=$vendedorId".httpGet().responseString()
+            val (request, response, result) = "http://172.29.22.4:1337/Producto?vendedorId=$vendedorId".httpGet().responseString()
             val jsonStringProducto = result.get()
 
             val parser = Parser()
