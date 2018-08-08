@@ -84,32 +84,16 @@
         android:id="@+id/textViewTitulo"
         android:layout_width="181dp"
         android:layout_height="46dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="48dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
         android:gravity="center"
         android:text="@string/inicia_sesi_n"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/linearLayoutDatos"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="85dp"
-        android:layout_height="76dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayoutDatos"
-        app:layout_constraintEnd_toEndOf="@+id/textViewTitulo"
-        app:layout_constraintStart_toStartOf="@+id/textViewTitulo"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTitulo"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@mipmap/selloepn" />
 </android.support.constraint.ConstraintLayout>

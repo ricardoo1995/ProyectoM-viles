@@ -21,16 +21,21 @@ class RegistrarUsuarios : AppCompatActivity() {
 
 
         if (rol.equals("ADMINISTRADOR",true)){
-
-
-        }else if (rol.equals("FACTURA",true)){
             btnBuscarVendedores.visibility = View.INVISIBLE
+            btn_Factura.visibility = View.INVISIBLE
+
+
+
+        }else if (rol.equals("CLIENTE",true)){
+
             btnCrearVendedor.visibility = View.INVISIBLE
             btnListarVendedor.visibility = View.INVISIBLE
-            irFacturaActivity()
+
 
         }else{
             btnCrearVendedor.visibility = View.INVISIBLE
+            btnBuscarVendedores.visibility = View.INVISIBLE
+
 
         }
 
@@ -53,9 +58,7 @@ class RegistrarUsuarios : AppCompatActivity() {
         btn_Factura.setOnClickListener { v: View? ->
             irFacturaActivity()
         }
-        btn_ordenes.setOnClickListener { v: View? ->
-            irDetalleOrdenes()
-        }
+
 
 
 

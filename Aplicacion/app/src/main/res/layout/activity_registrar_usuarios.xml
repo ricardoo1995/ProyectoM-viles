@@ -10,27 +10,26 @@
 
     <Button
         android:id="@+id/btnCrearVendedor"
-        android:layout_width="258dp"
-        android:layout_height="43dp"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
         android:background="@color/colorPrimary"
         android:text="Crear Vendedor"
         android:textColor="@android:color/background_light"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.818"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnListarVendedor"
-        android:layout_width="300dp"
-        android:layout_height="90dp"
+        android:layout_width="208dp"
+        android:layout_height="70dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
         android:background="@color/colorPrimary"
         android:text="Listar Vendedores"
         android:textColor="@android:color/background_light"
@@ -41,11 +40,11 @@
 
     <Button
         android:id="@+id/btnBuscarVendedores"
-        android:layout_width="300dp"
-        android:layout_height="90dp"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="20dp"
         android:background="@color/colorPrimary"
         android:text="Buscar Vendedores"
         android:textColor="@android:color/background_light"
@@ -56,40 +55,34 @@
 
     <Button
         android:id="@+id/btn_salirsistema"
-        android:layout_width="90dp"
-        android:layout_height="32dp"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginStart="8dp"
         android:background="@color/colorPrimary"
         android:text="Salir"
         android:textColor="@android:color/background_light"
         android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnListarVendedor" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btn_Factura"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_marginBottom="8dp"
-        android:text="Factura"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="128dp" />
-
-    <Button
-        android:id="@+id/btn_ordenes"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="40dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
-        android:text="Ordenes"
-        app:layout_constraintBottom_toTopOf="@+id/btn_Factura"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="8dp"
+        android:background="#99CC33"
+        android:text="Factura"
+        app:layout_constraintBottom_toTopOf="@+id/btn_salirsistema"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_salirsistema" />
+        app:layout_constraintTop_toBottomOf="@+id/btnListarVendedor"
+        app:layout_constraintVertical_bias="1.0" />
 
 </android.support.constraint.ConstraintLayout>

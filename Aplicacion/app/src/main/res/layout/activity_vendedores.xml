@@ -112,9 +112,9 @@
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/btnGuardarVendedor"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintHorizontal_bias="0.209"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtCedulaVendedor"
-        app:layout_constraintVertical_bias="0.3" />
+        app:layout_constraintVertical_bias="0.08" />
 
 </android.support.constraint.ConstraintLayout>
