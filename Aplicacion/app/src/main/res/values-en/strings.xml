@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">Wholesale management</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="textview">TextView</string>
+    <string name="inicia_sesi_n">Log in</string>
+    <string name="crear">CREATE SELLER</string>
+    <string name="listar">LIST SELLER</string>
+    <string name="buscar">SEARCH SELLER</string>
+    <string name="vendedor">Seller</string>
+    <string name="nombre">Name</string>
+    <string name="apellido">Last Name</string>
+    <string name="fecha_nacimiento">BirthDate</string>
+    <string name="semestre">Semester</string>
+    <string name="telefono">Telephone</string>
+    <string name="guardar">SAVE</string>
+    <string name="detalles">DETAILS</string>
+    <string name="creacion_producto">Create Product</string>
+    <string name="editar">Edit</string>
+    <string name="eliminar">Remove</string>
+    <string name="factura">Bill</string>
+    <string name="resultados">Search Results</string>
+
+    <string name="Comprar">Sell</string>
+    <string name="cedula">ID Card</string>
+    <string name="sector">Address</string>
+    <string name="datos_comprador">Buyers data</string>
+    <string name="detalle_orden">Order detail</string>
+    <string name="id_producto">ID Product</string>
+    <string name="fecha_envio">Shipping date</string>
+    <string name="precio">Product price</string>
+    <string name="enviar_orden">Send Order</string>
+    <string name="ver_ubicacion">See ubication</string>
+    <string name="codigo">Code</string>
+    <string name="descripcion">Description</string>
+    <string name="marca">Brand</string>
+    <string name="modelo">Model</string>
+    <string name="valor">Value</string>
+    <string name="detalle_producto">Product Detail </string>
+    <string name="adquirir_producto">Get Product</string>
+    <string name="nuevo_producto">New Product</string>
+    <string name="lista_productos">Product List</string>
+    <string name="detalle_vendedor">Seller Detail</string>
+    <string name="foto">Photo</string>
+    <string name="salir">Exit</string>
+    <string name="ingrese_buscar">Write the sellers name</string>
+
+    <string-array name="roles">
+        <item>ADMINISTRADOR</item>
+        <item>VENDEDOR</item>
+        <item>CLIENTE</item>
+    </string-array>
+    <string name="title_activity_google_maps">Map</string>
+</resources>

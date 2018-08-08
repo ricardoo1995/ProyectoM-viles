@@ -8,12 +8,12 @@
 
     <TextView
         android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="227dp"
+        android:layout_height="25dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="28dp"
-        android:text="Buscar Vendedor"
+        android:text="@string/buscar"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -39,7 +39,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="@color/colorPrimary"
             android:ems="10"
-            android:hint="Ingresa nombre de vendedor"
+            android:hint="@string/ingrese_buscar"
             android:inputType="textPersonName"
             android:textAlignment="center" />
 
@@ -48,7 +48,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorPrimary"
-            android:text="BUSCAR"
+            android:text="@string/buscar"
             android:textColor="@android:color/background_light" />@android:color/background_light" />
     </LinearLayout>
 
@@ -59,7 +59,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="28dp"
-        android:text="Resultados de busqueda"
+        android:text="@string/resultados"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"

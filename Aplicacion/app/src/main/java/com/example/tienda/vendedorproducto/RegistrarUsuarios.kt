@@ -30,6 +30,7 @@ class RegistrarUsuarios : AppCompatActivity() {
 
             btnCrearVendedor.visibility = View.INVISIBLE
             btnListarVendedor.visibility = View.INVISIBLE
+            btn_Factura.visibility = View.INVISIBLE
 
 
         }else{

@@ -1,13 +1,13 @@
 <resources>
-    <string name="app_name">VendedoresProductos</string>
+    <string name="app_name">Administracion Mayorista</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
     <string name="login">Login</string>
     <string name="textview">TextView</string>
     <string name="inicia_sesi_n">Inicia Sesión</string>
-    <string name="crear">CREAR</string>
-    <string name="listar">LISTAR</string>
-    <string name="buscar">BUSCAR</string>
+    <string name="crear">CREAR VENDEDOR</string>
+    <string name="listar">LISTAR VENDEDORES</string>
+    <string name="buscar">BUSCAR VENDEDORES</string>
     <string name="vendedor">Vendedor</string>
     <string name="nombre">Nombre</string>
     <string name="apellido">Apellido</string>
@@ -19,6 +19,33 @@
     <string name="creacion_producto">Creacion Producto</string>
     <string name="editar">Editar</string>
     <string name="eliminar">Eliminar</string>
+    <string name="factura">Factura</string>
+    <string name="resultados">Resultados de la busqueda</string>
+    <string name="Comprar">Comprar</string>
+    <string name="cedula">Cedula</string>
+    <string name="sector">Sector</string>
+    <string name="datos_comprador">Datos del comprador</string>
+    <string name="detalle_orden">Detalle orden</string>
+    <string name="id_producto">ID Producto</string>
+    <string name="fecha_envio">Fecha envio</string>
+    <string name="precio">Precio Producto</string>
+    <string name="enviar_orden">Enviar orden</string>
+    <string name="ver_ubicacion">Ver ubicacion</string>
+    <string name="codigo">Codigo</string>
+    <string name="descripcion">Descripcion</string>
+    <string name="marca">Marca</string>
+    <string name="modelo">Modelo</string>
+    <string name="valor">Valor</string>
+    <string name="detalle_producto">Detalle Producto</string>
+    <string name="adquirir_producto">Adquirir Producto</string>
+    <string name="nuevo_producto">Nuevo Producto</string>
+    <string name="lista_productos">Lista de productos</string>
+    <string name="detalle_vendedor">Detalle Vendedor</string>
+    <string name="foto">Foto</string>
+    <string name="salir">Salir</string>
+    <string name="ingrese_buscar">Ingrese el nombre del vendedor</string>
+
+
     <string-array name="roles">
         <item>ADMINISTRADOR</item>
         <item>VENDEDOR</item>

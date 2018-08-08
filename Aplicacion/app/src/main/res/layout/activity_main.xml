@@ -84,7 +84,7 @@
         android:id="@+id/textViewTitulo"
         android:layout_width="181dp"
         android:layout_height="46dp"
-        android:layout_marginBottom="48dp"
+        android:layout_marginBottom="44dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:gravity="center"
@@ -93,7 +93,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/linearLayoutDatos"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintHorizontal_bias="0.55"
         app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
