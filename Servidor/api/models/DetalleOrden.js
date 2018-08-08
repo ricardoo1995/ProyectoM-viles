@@ -1,15 +1,22 @@
+/**
+ * DetalleOrden.js
+ *
+ * @description :: A model definition.  Represents a database table/collection/etc.
+ * @docs        :: https://sailsjs.com/docs/concepts/models-and-orm/models
+ */
+
 module.exports = {
 
   attributes: {
 
-
-
-    orden: {
-      model: 'orden'
+    fechaEnvio: {
+      type: "string"
     },
-
-    aplicacion: {
-      model: 'aplicacion',
+    precio: {
+      type: "number"
+    },
+    idProducto:{
+      type: "number"
     }
 
   },

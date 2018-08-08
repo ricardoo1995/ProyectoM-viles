@@ -31,10 +31,10 @@ class BaseDatosOrdenes{
             val policy = StrictMode.ThreadPolicy.Builder().permitAll().build()
             StrictMode.setThreadPolicy(policy)
             val (request, response, result) = "http://192.168.100.134:1337/Orden".httpGet().responseString()
-            val jsonStringPokemon = result.get()
+            val jsonStringOrden = result.get()
 
             val parser = Parser()
-            val stringBuilder = StringBuilder(jsonStringPokemon)
+            val stringBuilder = StringBuilder(jsonStringOrden)
             val array = parser.parse(stringBuilder) as JsonArray<JsonObject>
 
             array.forEach {

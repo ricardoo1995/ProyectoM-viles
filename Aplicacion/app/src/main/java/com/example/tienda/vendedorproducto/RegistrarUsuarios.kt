@@ -21,17 +21,17 @@ class RegistrarUsuarios : AppCompatActivity() {
 
 
         if (rol.equals("ADMINISTRADOR",true)){
-            btnBuscarVendedores.visibility = View.INVISIBLE
+
 
         }else if (rol.equals("FACTURA",true)){
             btnBuscarVendedores.visibility = View.INVISIBLE
             btnCrearVendedor.visibility = View.INVISIBLE
             btnListarVendedor.visibility = View.INVISIBLE
-            irActividadDelivery()
+            irFacturaActivity()
 
         }else{
             btnCrearVendedor.visibility = View.INVISIBLE
-            btnListarVendedor.visibility = View.INVISIBLE
+
         }
 
 
@@ -50,10 +50,21 @@ class RegistrarUsuarios : AppCompatActivity() {
         btn_salirsistema.setOnClickListener { v: View? ->
             irMainActivity()
         }
+        btn_Factura.setOnClickListener { v: View? ->
+            irFacturaActivity()
+        }
+        btn_ordenes.setOnClickListener { v: View? ->
+            irDetalleOrdenes()
+        }
+
 
 
     }
-
+    fun irDetalleOrdenes(){
+        val intent = Intent(this, DetalleOrdenesActivity::class.java)
+        intent.putExtra("tipo", "Create")
+        startActivity(intent)
+    }
     fun irVendedorActivity(){
         val intent = Intent(this, VendedorActivity::class.java)
         intent.putExtra("tipo", "Create")
@@ -65,8 +76,8 @@ class RegistrarUsuarios : AppCompatActivity() {
         startActivity(intent)
     }
 
-    fun irActividadDelivery(){
-        val intent = Intent(this,DeliveryActivity::class.java)
+    fun irFacturaActivity(){
+        val intent = Intent(this,FacturaActivity::class.java)
         startActivity(intent)
 
     }
@@ -79,6 +90,10 @@ class RegistrarUsuarios : AppCompatActivity() {
 
     fun irMainActivity(){
         val intent = Intent(this,MainActivity::class.java)
+        startActivity(intent)
+    }
+    fun irDetallesOrdenesActivity(){
+        val intent = Intent(this,DetalleOrdenesActivity::class.java)
         startActivity(intent)
     }
 

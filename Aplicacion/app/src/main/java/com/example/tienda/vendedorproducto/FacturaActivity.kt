@@ -4,16 +4,16 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.DefaultItemAnimator
 import android.support.v7.widget.LinearLayoutManager
-import kotlinx.android.synthetic.main.activity_delivery.*
+import kotlinx.android.synthetic.main.activity_factura.*
 
-class DeliveryActivity : AppCompatActivity() {
+class FacturaActivity : AppCompatActivity() {
 
     lateinit var adaptador: OrdenesPendientesAdaptador
     lateinit var ordenes: ArrayList<Ordenes>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_delivery)
+        setContentView(R.layout.activity_factura)
 
         ordenes = BaseDatosOrdenes.getOrdenesList()
 

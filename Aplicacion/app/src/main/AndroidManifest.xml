@@ -42,7 +42,7 @@
         <activity android:name=".VendedorActivity" />
         <activity android:name=".ListarVendedoresActivity" />
         <activity android:name=".DetallesVendedorActivity" />
-        <activity android:name=".DeliveryActivity" />
+        <activity android:name=".FacturaActivity" />
         <activity android:name=".ProductoActivity" />
         <activity android:name=".DetallesProductoActivity" />
         <activity android:name=".BuscarVendedorActivity" />
